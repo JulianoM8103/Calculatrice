@@ -1,0 +1,72 @@
+
+<html> 
+    <title> 🧮 Calculatrice </title>
+    <head> 
+       <script> 
+          //fonction qui évalue le chiffre et renvoie la sortie
+          function calculer() 
+          { 
+              let a = document.getElementById("output").value 
+              let b = eval(a) 
+              document.getElementById("output").value = b 
+          } 
+          //fonction qui affiche la valeur
+          function afficher(val) 
+          { 
+              document.getElementById("output").value+=val 
+          } 
+          //fonction qui efface l'écran 
+          function effacer() 
+          { 
+              document.getElementById("output").value = "" 
+          } 
+       </script>
+       <style>
+         td button{width:100%}
+         table {
+             margin-left: auto;
+             margin-right: auto;
+             margin-top: auto;
+             margin-bottom: auto;
+         }
+         .Title {
+             font-size: 40px;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             color: cornflowerblue;
+         }
+       </style>
+    </head> 
+    <body> 
+        <center><div class="Title"> Calculatrice simple </div></center>
+       <table border="1"> 
+          <tr> 
+             <td colspan="3"><input id="output"/></td> 
+             <td><button onclick="effacer()">c</button></td> 
+          </tr> 
+          <tr> 
+             <td><button onclick="afficher('1')">1</button></td> 
+             <td><button onclick="afficher('2')">2</button></td> 
+             <td><button onclick="afficher('3')">3</button></td> 
+             <td><button onclick="afficher('+')">+</button></td> 
+          </tr> 
+          <tr> 
+             <td><button onclick="afficher('4')">4</button></td> 
+             <td><button onclick="afficher('5')">5</button></td> 
+             <td><button onclick="afficher('6')">6</button></td> 
+             <td><button onclick="afficher('-')">-</button></td> 
+          </tr> 
+          <tr> 
+             <td><button onclick="afficher('7')">7</button></td> 
+             <td><button onclick="afficher('8')">8</button></td> 
+             <td><button onclick="afficher('9')">9</button></td> 
+             <td><button onclick="afficher('*')">*</button></td> 
+          </tr> 
+          <tr>
+             <td><button onclick="afficher('.')">.</button></td> 
+             <td><button onclick="afficher('0')">0</button></td> 
+             <td><button onclick="calculer()">=</button></td> 
+             <td><button onclick="afficher('/')">/</button></td> 
+          </tr> 
+       </table> 
+    </body> 
+ </html>
